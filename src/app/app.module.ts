@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { CompilerFactory, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { JitCompilerFactory } from '@angular/platform-browser-dynamic';
 import { SohoComponentsModule } from 'ids-enterprise-ng';
 
 import { AppComponent } from './app.component';
@@ -12,7 +13,12 @@ import { AppComponent } from './app.component';
     BrowserModule,
     SohoComponentsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: CompilerFactory,
+      useFactory: JitCompilerFactory,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

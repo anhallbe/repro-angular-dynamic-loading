@@ -20,6 +20,7 @@
     "@angular/router": "~12.0.4",
     "ids-enterprise-ng": "^10.1.0",
     "rxjs": "~6.6.0",
+    "systemjs": "^0.20.19",
     "tslib": "^2.1.0",
     "zone.js": "~0.11.4"
   },
